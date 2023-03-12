@@ -1,4 +1,4 @@
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -181,6 +181,7 @@ public class ClassSectionTester {
     // Test 18
     public void TestForClassSectionAddStudentAddsStudentCorrectly() {
         setUp();
+        System.out.println("ttt" + cs.toString());
         cs.addStudent(student1);
         assertEquals("Make sure that the add student method adds a student to the class section!", cs.getStudents().size(), 1);
         tearDown();
@@ -228,6 +229,7 @@ public class ClassSectionTester {
         cs.addStudent(student4);
         cs.removeStudent(student1);
         cs.removeStudent(student4);
+        System.out.println("actual size" + cs.getStudents().size());
         assertEquals("Make sure that the add student and remove student methods work correctly!", cs.getStudents().size(), 0);
         tearDown();
     }
